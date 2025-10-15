@@ -103,8 +103,8 @@ Try logging in with your existing credentials from the web app:
 **Password**: (your password)
 
 Or use admin credentials:
-- Email: `agrisonic@admin.com`
-- Password: `admin@123`
+- Email: `admin@example.com`
+- Password: `your_password_here`
 
 The login will:
 1. Connect to your backend API

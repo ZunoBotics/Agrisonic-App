@@ -329,8 +329,8 @@ Copyright © 2025 Agrisonic. All rights reserved.
 ## Contact
 
 For issues or questions:
-- Email: agrisonic030@gmail.com
-- GitHub Issues: [Create an issue](https://github.com/agrisonic/agrisonic-app/issues)
+- Email: [Contact via GitHub Issues]
+- GitHub Issues: [Create an issue](https://github.com/ZunoBotics/Agrisonic-App/issues)
 
 ---
 
