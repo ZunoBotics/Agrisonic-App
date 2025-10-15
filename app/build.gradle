@@ -13,7 +13,7 @@ if (localPropertiesFile.exists()) {
 }
 
 // Get Google Maps API key
-def mapsApiKey = localProperties.getProperty('GOOGLE_MAPS_API_KEY') ?: "AIzaSyA5q20KqVNY0ckce1TPldzH3g821RH5OBs"
+def mapsApiKey = localProperties.getProperty('GOOGLE_MAPS_API_KEY') ?: ""
 
 android {
     namespace 'com.agrisonic.app'

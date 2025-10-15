@@ -16,10 +16,17 @@ Create a file named `local.properties` in the project root:
 
 ```properties
 sdk.dir=/Users/jonathan/Library/Android/sdk
-GOOGLE_MAPS_API_KEY=AIzaSyA5q20KqVNY0ckce1TPldzH3g821RH5OBs
+GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY_HERE
 ```
 
-*(Use your actual Android SDK path)*
+*(Replace with your actual Android SDK path and Google Maps API key)*
+
+**To get a Google Maps API Key:**
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create/select a project
+3. Enable "Maps SDK for Android"
+4. Create credentials → API Key
+5. Add the key to `local.properties`
 
 ### Step 3: Add Firebase Configuration
 
