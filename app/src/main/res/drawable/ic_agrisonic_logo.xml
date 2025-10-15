@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Placeholder logo - replace with actual Agrisonic logo -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M60,20L40,40L40,70L60,90L80,70L80,40Z" />
+
+    <path
+        android:fillColor="@color/primary_light"
+        android:pathData="M60,35L50,45L50,65L60,75L70,65L70,45Z" />
+</vector>

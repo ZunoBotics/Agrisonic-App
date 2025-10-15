@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Exact React App Colors -->
+    <color name="primary">#16a249</color>
+    <color name="primary_dark">#0f7033</color>
+    <color name="primary_light">#dcfce7</color>
+
+    <!-- Green Scale (Tailwind green-50 to green-900) -->
+    <color name="green_50">#f0fdf4</color>
+    <color name="green_100">#dcfce7</color>
+    <color name="green_200">#bbf7d0</color>
+    <color name="green_300">#86efac</color>
+    <color name="green_400">#4ade80</color>
+    <color name="green_500">#22c55e</color>
+    <color name="green_600">#16a249</color>
+    <color name="green_700">#0f7033</color>
+    <color name="green_800">#166534</color>
+    <color name="green_900">#14532d</color>
+
+    <!-- Header Color (from React app) -->
+    <color name="header_green">#3d5941</color>
+
+    <!-- Gray Scale (Tailwind slate) -->
+    <color name="gray_50">#f8fafc</color>
+    <color name="gray_100">#f1f5f9</color>
+    <color name="gray_200">#e2e8f0</color>
+    <color name="gray_300">#cbd5e1</color>
+    <color name="gray_400">#94a3b8</color>
+    <color name="gray_500">#64748b</color>
+    <color name="gray_600">#475569</color>
+    <color name="gray_700">#334155</color>
+    <color name="gray_800">#1e293b</color>
+    <color name="gray_900">#0f172a</color>
+
+    <!-- Background -->
+    <color name="background">#FFFFFF</color>
+    <color name="background_secondary">#f8fafc</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#0f172a</color>
+    <color name="text_secondary">#65758b</color>
+    <color name="text_disabled">#94a3b8</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Secondary Colors (for compatibility) -->
+    <color name="secondary">#16a249</color>
+    <color name="secondary_dark">#0f7033</color>
+    <color name="secondary_light">#dcfce7</color>
+
+    <!-- Status Colors -->
+    <color name="success">#22c55e</color>
+    <color name="error">#ef4444</color>
+    <color name="warning">#f59e0b</color>
+    <color name="info">#3b82f6</color>
+
+    <!-- Border & Divider -->
+    <color name="border">#e2e8f0</color>
+    <color name="divider">#e2e8f0</color>
+    <color name="input_border">#d1d5db</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Black/White -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Hover/Focus States -->
+    <color name="primary_hover">#0f7033</color>
+    <color name="input_focus">#16a249</color>
+</resources>

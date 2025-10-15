@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/login_card_padding">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/login_logo_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:src="@drawable/agrisonic_logo"
+            android:contentDescription="@string/app_logo" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:text="@string/verify_code"
+            android:textSize="@dimen/text_2xl"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/primary_dark" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_2"
+            android:text="@string/enter_code_sent"
+            android:textSize="@dimen/text_sm"
+            android:gravity="center"
+            android:textColor="@color/text_secondary" />
+
+        <!-- Email Display -->
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_2"
+            android:textSize="@dimen/text_sm"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <!-- Verification Code Input -->
+        <EditText
+            android:id="@+id/etCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:hint="@string/verification_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:background="@drawable/bg_input_selector"
+            android:textSize="@dimen/text_base"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_disabled" />
+
+        <!-- Success/Error Message -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:textSize="@dimen/text_sm"
+            android:visibility="gone"
+            android:padding="@dimen/spacing_3"
+            android:background="@drawable/bg_card_rounded" />
+
+        <!-- Verify Button -->
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button_height"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:text="@string/verify"
+            android:textSize="@dimen/text_lg"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_primary"
+            android:background="@drawable/bg_button_primary_selector"
+            android:elevation="@dimen/elevation_sm"
+            android:stateListAnimator="@null" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:visibility="gone" />
+
+        <!-- Resend Code Link -->
+        <TextView
+            android:id="@+id/tvResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:text="@string/resend_code"
+            android:textSize="@dimen/text_sm"
+            android:textColor="@color/primary"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- New Password Section (for password reset) -->
+        <LinearLayout
+            android:id="@+id/layoutNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- New Password Input -->
+            <EditText
+                android:id="@+id/etNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_input_height"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:hint="@string/new_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:background="@drawable/bg_input_selector"
+                android:textSize="@dimen/text_base"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_disabled" />
+
+            <!-- Confirm New Password Input -->
+            <EditText
+                android:id="@+id/etConfirmNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_input_height"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:background="@drawable/bg_input_selector"
+                android:textSize="@dimen/text_base"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_disabled" />
+
+            <!-- Change Password Button -->
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:text="@string/change_password"
+                android:textSize="@dimen/text_lg"
+                android:textStyle="bold"
+                android:textColor="@color/text_on_primary"
+                android:background="@drawable/bg_button_primary_selector"
+                android:elevation="@dimen/elevation_sm"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
