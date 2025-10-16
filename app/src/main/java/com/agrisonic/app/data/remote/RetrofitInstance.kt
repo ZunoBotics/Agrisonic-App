@@ -50,17 +50,20 @@ object RetrofitInstance {
         }
     }
 
-    // Auth interceptor to add session token
+    // Auth interceptor to add bearer token for Laravel Sanctum
     private val authInterceptor = Interceptor { chain ->
         val originalRequest = chain.request()
         val token = preferencesManager.getSessionToken()
 
         val request = if (!token.isNullOrEmpty()) {
             originalRequest.newBuilder()
-                .header("Cookie", "session-token=$token")
+                .header("Authorization", "Bearer $token")
+                .header("Accept", "application/json")
                 .build()
         } else {
-            originalRequest
+            originalRequest.newBuilder()
+                .header("Accept", "application/json")
+                .build()
         }
 
         chain.proceed(request)

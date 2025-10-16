@@ -31,9 +31,8 @@ android {
             useSupportLibrary true
         }
 
-        // API Base URL - Replace with your actual Vercel production URL
-        // Example: "https://agrisonic.vercel.app" or "https://yourdomain.com"
-        buildConfigField "String", "API_BASE_URL", "\"https://v0-agrisonic-website-redesign.vercel.app\""
+        // API Base URL - Laravel Backend on Railway
+        buildConfigField "String", "API_BASE_URL", "\"https://agrisonic-backend-production.up.railway.app\""
         buildConfigField "String", "RAILWAY_SENSOR_SERVER", "\"https://sensors.zunobotics.com\""
 
         // Google Maps API Key

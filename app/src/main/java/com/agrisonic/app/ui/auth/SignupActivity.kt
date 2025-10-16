@@ -103,8 +103,6 @@ class SignupActivity : AppCompatActivity() {
                 val response = RetrofitInstance.authApi.signup(request)
 
                 if (response.isSuccessful && response.body()?.success == true) {
-                    val data = response.body()?.data
-
                     // Show success message
                     Toast.makeText(
                         this@SignupActivity,

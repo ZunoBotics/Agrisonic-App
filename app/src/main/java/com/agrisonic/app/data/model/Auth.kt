@@ -100,6 +100,9 @@ data class LoginData(
     @SerializedName("user")
     val user: User,
 
+    @SerializedName("token")
+    val token: String? = null,
+
     @SerializedName("redirect")
     val redirect: String? = null
 )
@@ -117,13 +120,16 @@ data class SignupResponse(
 
 data class SignupData(
     @SerializedName("message")
-    val message: String,
+    val message: String? = null,
 
     @SerializedName("user")
-    val user: User,
+    val user: User? = null,
+
+    @SerializedName("verificationCode")
+    val verificationCode: String? = null,
 
     @SerializedName("requiresVerification")
-    val requiresVerification: Boolean
+    val requiresVerification: Boolean? = null
 )
 
 data class VerifyCodeResponse(

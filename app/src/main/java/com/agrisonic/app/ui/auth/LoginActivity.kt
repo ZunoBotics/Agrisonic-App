@@ -78,8 +78,12 @@ class LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body()?.success == true) {
                     val loginData = response.body()?.data
                     val user = loginData?.user
+                    val token = loginData?.token
 
-                    if (user != null) {
+                    if (user != null && token != null) {
+                        // Save auth token (for Laravel Sanctum)
+                        preferencesManager.saveSessionToken(token)
+
                         // Save user info
                         preferencesManager.saveUserInfo(
                             userId = user.id,
@@ -96,9 +100,12 @@ class LoginActivity : AppCompatActivity() {
 
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
+                    } else {
+                        Toast.makeText(this@LoginActivity, "Login failed: Missing user or token data", Toast.LENGTH_LONG).show()
                     }
                 } else {
-                    val errorMessage = response.body()?.error ?: "Login failed"
+                    // Laravel returns "message" field, not "error"
+                    val errorMessage = response.body()?.error ?: response.errorBody()?.string() ?: "Login failed - Status: ${response.code()}"
                     Toast.makeText(this@LoginActivity, errorMessage, Toast.LENGTH_LONG).show()
                 }
             } catch (e: Exception) {
